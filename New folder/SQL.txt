@@ -1,0 +1,46 @@
+CREATE DATABASE HDFC_Demo;    -- for creating the DB
+
+use HDFC_Demo;    --for changing the databases
+
+show DATABASES;   -- for displaying the databases
+
+show tables;       -- for displaying the tables
+
+CREATE Table employee(eid int(3)  PRIMARY key,ename varchar(30),salary DECIMAL,doj DATE);
+
+
+describe employee;
+
+drop Table employee; ---will delete the table
+
+ALter Table employee add (comm DECIMAL(7,2));
+
+Alter Table employee drop comm;
+
+Alter Table employee RENAME COLUMN doj to dateofjoining;
+
+Alter table employee MODIFY dateofJoining date;
+alter table employee MODIFY ename varchar(40);
+
+TRUNCATE TABLE employee;
+
+Rename table employee to emp;
+Rename table emp to employee;
+
+
+
+
+
+insert into  employee VALUES(10, 'alen', 1000, '2020-10-10');
+insert into  employee VALUES(6, 'alamen', 25000, '2019-12-1');
+insert into  employee VALUES(7, 'amal', 1500, '2022-12-10');
+insert into  employee VALUES(8, 'ajmal', 10500, '2022-1-30');
+
+
+SELECT * from employee;
+
+update  employee set ename='Ajmal' where ename='ajmal';
+
+insert into employee VALUES(4,'Arun',25000,'2014-12-14');
+
+delete from employee where eid BETWEEN 1 and 10;
